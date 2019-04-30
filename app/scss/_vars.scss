@@ -1,0 +1,41 @@
+// fonts settings
+
+// $default-font: "roboto-example", sans-serif;
+$default-font: 'Philosopher', sans-serif;
+$default-font-weight: 400;
+
+//fond sizes
+$fz-base: 30px !default;
+$fz-small: ceil(($fz-base * 0.53)) !default; // ~16px
+$fz-medium: ceil(($fz-base * 0.66)) !default; // ~20px
+$fz-large: ceil(($fz-base * 2)) !default; // ~60px
+
+// general settings
+$max-width: 1430px !default;
+$padding-base: 15px !default;
+
+// media
+$breakpoints: (
+  'mobile-m': (max-width: 375px),
+  'mobile-l': (max-width: 425px),
+  'extra-small': (max-width: 480px),
+  'small': (max-width: 767px),
+  'medium': (max-width: 992px),
+  '1100': (max-width: 1100px),
+  'large': (max-width: 1200px),
+  'larger': (max-width: 1300px),
+  'huge': (max-width: 1400px),
+  'huger': (max-width: 1510px)
+) !default;
+
+
+$accent: orange;
+$text: #333;
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+
+$gutter: $grid-gutter-width;
