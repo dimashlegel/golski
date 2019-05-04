@@ -1,0 +1,41 @@
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@mixin btn-effect-active(){
+  box-shadow: inset 2px 5px 5px rgba(0,0,0,.15);
+}
+
+@mixin link_no-hover($color) {
+	color: $color;
+	text-decoration: none;
+	&:hover, &:focus, &:active {
+		color: $color;
+		text-decoration: none;
+	}
+}
+
+@mixin link_on-hover($color_no-hover, $color_on-hover) {
+	color: $color_no-hover;
+	text-decoration: none;
+	&:hover, &:focus, &:active {
+		color: $color_on-hover;
+		text-decoration: none;
+	}
+}
