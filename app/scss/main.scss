@@ -46,8 +46,17 @@ body {
 }
 
 main {
+	background-color: #fff;
 	flex: 1 0 auto;
 	overflow: hidden;
+	background-image: url(../img/main-back.png);
+	// background-position: center;
+	background-repeat: repeat;
+	background-size: 100% auto;
+}
+
+.black-back {
+	background-color: #000;
 }
 
 .section-limit {
@@ -65,7 +74,7 @@ main {
 	width: 100%;
 	margin: 0 auto;
 	&_shadow {
-		box-shadow: 0 0 20px 2px rgba($color: #000000, $alpha: 0.2);
+		box-shadow: 0 0 30px 0px rgba($color: #000000, $alpha: 0.15);
 	}
 }
 
@@ -312,6 +321,14 @@ strong {
 	}
 }
 
+.wrapper-all-content {
+	background-color: #fff;
+	position: relative;
+	display: block;
+	z-index: 1;
+	overflow: hidden;
+}
+
 .hp-products {
 	background-color: #fff;
 	& .row {
@@ -357,7 +374,6 @@ strong {
 			transform: translateY(-50%) rotate(45deg);
 			width: 76px;
 			height: 76px;
-
 			background-color: $orange;
 		}
 	}
@@ -372,6 +388,9 @@ strong {
 			display: inline-block;
 			@include link_on-hover($accent, $orange);
 			transition: color 0.3s ease;
+			&:hover {
+				text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+			}
 		}
 	}
 	&__img {
@@ -453,6 +472,7 @@ p.certificats {
 
 .content-map {
 	box-shadow: inset 0 30px 25px -14px rgba(255, 135, 23, .75);
+	// background: #fff;
 	& img {
 		pointer-events: none;
 		position: relative;
