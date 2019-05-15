@@ -1,27 +1,31 @@
-var syntax        = 'scss', // Syntax: sass or scss;
-		gulpversion   = '4'; // Gulp version: 3 or 4
-
-var gulp          = require('gulp'),
-		gutil         = require('gulp-util' ),
-		sass          = require('gulp-sass'),
-		browserSync   = require('browser-sync'),
-		concat        = require('gulp-concat'),
-		uglify        = require('gulp-uglify'),
-		cleancss      = require('gulp-clean-css'),
-		rename        = require('gulp-rename'),
-		autoprefixer  = require('gulp-autoprefixer'),
-		notify        = require('gulp-notify'),
-		rsync         = require('gulp-rsync');
+var syntax        	 = 'scss', // Syntax: sass or scss;
+		gulpversion   	 = '4'; // Gulp version: 3 or 4
+	 
+var gulp          	 = require('gulp'),
+		gutil         	 = require('gulp-util' ),
+		sass          	 = require('gulp-sass'),
+		browserSync   	 = require('browser-sync'),
+		concat        	 = require('gulp-concat'),
+		uglify        	 = require('gulp-uglify'),
+		cleancss      	 = require('gulp-clean-css'),
+		rename        	 = require('gulp-rename'),
+		autoprefixer  	 = require('gulp-autoprefixer'),
+		notify        	 = require('gulp-notify'),
+		rsync         	 = require('gulp-rsync');
+		pngquant 				 = require('imagemin-pngquant');
+		imagemin 				 = require('gulp-imagemin');
+		mozjpeg 				 = require('imagemin-mozjpeg');
+		jpegtran 				 = require('imagemin-jpegtran');
 
 gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
 			baseDir: 'app'
 		},
-		notify: false,
+		notify: true,
 		open: true,
 		// online: false, // Work Offline Without Internet Connection
-		// tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
+		// tunnel: true, tunnel: "golski", // Demonstration page: http://golski.localtunnel.me
 	})
 });
 
@@ -43,7 +47,7 @@ gulp.task('scripts', function() {
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Mifify js (opt.)
+	.pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({ stream: true }))
 });
@@ -66,6 +70,21 @@ gulp.task('rsync', function() {
 		silent: false,
 		compress: true
 	}))
+});
+
+gulp.task('compress', async function() {
+	gulp.src('app/images/**/*.{gif,png,jpg,svg}')
+	.pipe(imagemin([
+		// pngquant({quality: [0.5, 0.5]}),
+		pngquant({
+			speed: 1,	quality: [0.55, 0.65]
+		}),
+		jpegtran({
+			progressive: true
+	}),
+		mozjpeg({quality: 60})
+	]))
+	.pipe(gulp.dest('app/img/'))
 });
 
 if (gulpversion == 3) {
