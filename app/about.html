@@ -44,14 +44,14 @@
 									<li><a href="#">Praline bars</a></li>
 								</ul>
 							</li>
-						</ul>
-						<div class="header-logo">
-							<a href="."><img src="./img/logo.png" alt="logo"></a>
-						</div>
-						<ul class="main-nav__right">
+							<div class="header-logo">
+								<a href="."><img src="./img/logo.png" alt="logo"></a>
+							</div>
 							<li><a href="#">EXPORT</a></li>
 							<li><a href="#">CONTACTS</a></li>
 						</ul>
+						<!-- <ul class="main-nav__right">
+								</ul> -->
 					</nav>
 					<div class="language-block">
 						<div class="language-block__item"><a href="#"><img class="img-responsive" src="./img/flag-ukr.png" alt="ukr"></a></div>
@@ -60,10 +60,43 @@
 					</div>
 				</div>
 			</div>
-			<div class="header-mobile">
 
+			<div class="header-mobile">
+				<button class="hamburger hamburger--elastic" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+				<div class='header-mobile__menu menu-mobile'>
+					<div class="language-block language-block_mobile">
+						<div class="language-block__item"><a href="#"><img class="img-responsive" src="./img/flag-ukr.png" alt="ukr"></a></div>
+						<div class="language-block__item"><a href="#"><img class="img-responsive" src="./img/flag-gb.png" alt="gb"></a></div>
+						<div class="language-block__item"><a href="#"><img class="img-responsive" src="./img/flag-ru.png" alt="ru"></a></div>
+					</div>
+					<div class='menu-mobile__item'><a href="#">COMPANY</a></div>
+					<div class='menu-mobile__item'><a href="#">NEWS</a></div>
+					<div class='menu-mobile__item menu-mobile__item_arrow'>PRODUCTS <span>&#10095;</span>
+						<ul class="drop-menu drop-menu__side">
+							<li><a href="#">Long wafer rolls</a></li>
+							<li><a href="#">Short wafer rolls </a></li>
+							<li><a href="#">Glazed sweets</a></li>
+							<li><a href="#">Praline bars</a></li>
+						</ul>
+					</div>
+					<div class='menu-mobile__item'><a href="#">EXPORT</a></div>
+					<div class='menu-mobile__item'><a href="#">CONTACTS</a></div>
+				</div>
+				<div class="header-mobile__logo">
+					<a href=".">
+						<img src="./img/logo.png" alt="">
+					</a>
+				</div>
 			</div>
+
 		</header>
+
+		<div class="mobile-overlay"></div>
+
 		<main>
 			<div class="section-full section-full_shadow">
 				<!-- Banner slider -->
@@ -105,17 +138,21 @@
 
 			</div>
 		</main>
+
 		<footer class="ftr">
 			<div class="section-limit">
+				<div class="ftr-logo ftr-logo_top">
+					<a href="."><img src="./img/logo-1.png" alt="company logo"></a>
+				</div>
 				<div class="row">
-					<div class="col-sm-5">
+					<div class="col-md-5 col-sm-7 col-12">
 						<div class="ftr__contact ftr-cont">
 							<div class="ftr-cont__title ftr-title">
 								<span>CONTACT US</span>
 							</div>
 							<div class="ftr-desc">
 								<p>E-mail: golskisc@gmail.com</p>
-								<p>Call us: Tel. 0038 (03552) 2-66-54</p>
+								<p>Call us: Tel. <span class="ftr-tel">0038 (03552) 2-66-54</span></p>
 								<p>Fax: 2-66-14</p>
 								<p>Address: 14a Hranychna str.,
 									Chortkiv, Ternopil region,
@@ -123,7 +160,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-md-3 col-sm-5 col-12">
 						<div class="ftr__products">
 							<div class="ftr-title">
 								<span>PRODUCTS</span>
@@ -136,7 +173,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-md-4 col-sm-12 col-12">
 						<div class="ftr__company">
 							<div class="ftr-title">
 								<span>LLC “GOLSKI
@@ -146,7 +183,7 @@
 								<p><a href="#">About company</a></p>
 								<p><a href="#">Export</a></p>
 							</div>
-							<div class="ftr-logo">
+							<div class="ftr-logo ftr-logo_bottom">
 								<a href="."><img src="./img/logo-1.png" alt="company logo"></a>
 							</div>
 						</div>
@@ -156,7 +193,7 @@
 		</footer>
 
 		<a href="#" class="side-catalog">
-			<p>download catalogue</p>
+			<p><span>download</span> catalogue</p>
 		</a>
 	</div>
 	<script src="js/scripts.min.js"></script>

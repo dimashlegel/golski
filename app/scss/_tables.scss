@@ -1,0 +1,92 @@
+.table-main {
+	& table {
+		color: $accent;
+		line-height: 1;
+		font-size: 20px;
+		font-weight: 400;
+		@include respond-to('extra-small') {
+			font-size: 18px;
+		}
+		& thead {
+			background-color: $orange;
+			& th {
+				padding: 5px 1px 5px 1px;
+				font-weight: 400;
+				border: 4px solid $accent;
+				@include respond-to('extra-small') {
+					border: 2px solid $accent;
+				}
+				@include respond-to('extra-small') {
+					min-width: 80px;
+				}
+				&:first-child {
+					font-size: 25px;
+					@include respond-to('extra-small') {
+						font-size: 20px;
+						min-width: 145px;
+					}
+				}
+			}
+		}
+		& tbody {
+			background-color: #ffe3c1;
+			& tr {}
+			& td {
+				border: 4px solid $accent;
+				@include respond-to('extra-small') {
+					border: 2px solid $accent;
+				}
+			}
+		}
+	}
+}
+
+.table-main {
+	margin: 0 auto;
+	&__long-wafel {
+		max-width: 835px;
+		width: 100%;
+		& thead {
+			& th:first-child {
+				width: 42%;
+				background-color: $accent;
+				color: $orange;
+			}
+		}
+		& tbody {
+			& tr {
+				& td {
+					width: 11.6%;
+				}
+				& td:first-child {
+					padding: 0px 5px 0px 25px;
+					text-align: left;
+				}
+				& td:last-child {}
+			}
+		}
+		&_short {
+		max-width: 695px;
+
+			& tbody {
+				& tr {
+					& td:first-child {
+						background-color: $orange;
+					}
+				}
+			}
+		}
+	}
+}
+
+.td-with-number {
+	font-size: 27px;
+	@include respond-to('extra-small') {
+		font-size: 20px;
+	}
+}
+
+.td-with-desc {
+	font-size: 18px;
+	font-weight: 400;
+}
