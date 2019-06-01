@@ -99,23 +99,12 @@ $(function() {
 			overLay.toggleClass('mobile-overlay_show');
 		}
 
-		// hamburger.on({
-		// 	mouseenter: function() {
-		// 		// openMenu();
-		// 	}
-		// });
-
-		// menu.on({
-		// 	mouseleave: function() {
-		// 		// closeMenu();
-		// 	}
-		// });
-
 		hamburger.on({
 			click: function() {
 				toggleMenu();
 				toggleHamburger();
 				toggleOverlay();
+				$('.side-catalog').toggle(400);
 			}
 		});
 
@@ -131,7 +120,7 @@ $(function() {
 			if ($(this).find('.drop-menu__side').length == 1) {
 				$(this).toggleClass('menu-mobile__item_open menu-mobile__item_arrow-rotate');
 			} else {
-				dropMenu.removeClass('menu-mobile__item_open');
+				dropMenu.removeClass('menu-mobile__item_open menu-mobile__item_arrow-rotate');
 			}
 		})
 
