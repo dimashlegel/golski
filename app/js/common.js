@@ -132,4 +132,17 @@ $(function() {
 		});
 
 	});
+
+
+
+	var hp_prods = $('.hp-products').find('.hp-products__title');
+	var hp_prods_imgs = $('.hp-products').find('.hp-products__img');
+
+	for (var i = 0; i < hp_prods.length; i += 2) {
+		$(hp_prods[i]).attr('data-aos', 'fade-right');
+	}
+	for (var i = 0; i < hp_prods_imgs.length; i += 2) {		
+		$(hp_prods_imgs[i]).children("img").attr('data-aos', 'zoom-in-right');
+	}
+
 });
