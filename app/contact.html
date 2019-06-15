@@ -33,8 +33,9 @@
 			<div class="header-desktop">
 				<div class="section-limit section-limit_header">
 					<nav class="main-nav">
+
 						<ul class="main-nav__left">
-							<li><a class="active" href="#">COMPANY</a></li>
+							<li class="active"><a href="#">COMPANY</a></li>
 							<li><a href="#">NEWS</a></li>
 							<li><a href="#">PRODUCTS</a>
 								<ul class="drop-menu">
@@ -44,14 +45,17 @@
 									<li><a href="#">Praline bars</a></li>
 								</ul>
 							</li>
-							<div class="header-logo">
-								<a href="."><img src="./img/logo.png" alt="logo"></a>
-							</div>
+						</ul>
+
+						<div class="header-logo">
+							<a href="."><img src="./img/logo.png" alt="logo"></a>
+						</div>
+
+						<ul class="main-nav__right">
 							<li><a href="#">EXPORT</a></li>
 							<li><a href="#">CONTACTS</a></li>
 						</ul>
-						<!-- <ul class="main-nav__right">
-								</ul> -->
+
 					</nav>
 					<div class="language-block">
 						<div class="language-block__item"><a href="#"><img class="img-responsive" src="./img/flag-ukr.png" alt="ukr"></a></div>
@@ -73,18 +77,20 @@
 						<div class="language-block__item"><a href="#"><img class="img-responsive" src="./img/flag-gb.png" alt="gb"></a></div>
 						<div class="language-block__item"><a href="#"><img class="img-responsive" src="./img/flag-ru.png" alt="ru"></a></div>
 					</div>
-					<div class='menu-mobile__item'><a href="#">COMPANY</a></div>
-					<div class='menu-mobile__item'><a href="#">NEWS</a></div>
-					<div class='menu-mobile__item menu-mobile__item_arrow'>PRODUCTS <span>&#10095;</span>
-						<ul class="drop-menu drop-menu__side">
-							<li><a href="#">Long wafer rolls</a></li>
-							<li><a href="#">Short wafer rolls </a></li>
-							<li><a href="#">Glazed sweets</a></li>
-							<li><a href="#">Praline bars</a></li>
-						</ul>
-					</div>
-					<div class='menu-mobile__item'><a href="#">EXPORT</a></div>
-					<div class='menu-mobile__item'><a href="#">CONTACTS</a></div>
+					<ul>
+						<li class='menu-mobile__item'><a href="#">COMPANY</a></li>
+						<li class='menu-mobile__item'><a href="#">NEWS</a></li>
+						<li class='menu-mobile__item menu-mobile__item_arrow'>PRODUCTS <span>&#10095;</span>
+							<ul class="drop-menu drop-menu__side">
+								<li><a href="#">Long wafer rolls</a></li>
+								<li><a href="#">Short wafer rolls </a></li>
+								<li><a href="#">Glazed sweets</a></li>
+								<li><a href="#">Praline bars</a></li>
+							</ul>
+						</li>
+						<li class='menu-mobile__item'><a href="#">EXPORT</a></li>
+						<li class='menu-mobile__item'><a href="#">CONTACTS</a></li>
+					</ul>
 				</div>
 				<div class="header-mobile__logo">
 					<a href=".">
@@ -118,8 +124,8 @@
 							contacts
 						</h1>
 						<div class="contact-us">
-							<div class="contact-us__contact content-text content-text_back content-text_contact">
-								<p class="export-contacts" data-aos="fade-right">
+							<div class="contact-us__contact content-text content-text_back content-text_contact" data-aos="fade-right">
+								<p class="export-contacts">
 									<span class="subtitle">Please contact us:</span></br>
 									<br />
 									<span>E-mail: <span class="ftr-tel">golskisc@gmail.com</span></span></br>
@@ -131,27 +137,27 @@
 									</br>
 								</p>
 							</div>
-							<div class="contact-us__location">
-								<img src="./img/location.jpg" alt="our location" data-aos="fade-left">
+							<div class="contact-us__location" data-aos="fade-left">
+								<img src="./img/location.jpg" alt="our location">
 							</div>
 						</div>
 						<div class="contact-form-block">
 							<div class="contact-form-block__form">
-								<form class="contact-form" action="#" method="POST" data-aos="flip-up">
+								<form class="contact-form" action="" method="GET" data-aos="flip-up">
 									<div class="contact-form__left">
 										<div class="contact-form__title">callback</div>
 
 										<label class="contact-form__label" for="user-name">Name</label>
-										<input class="contact-form__input" type="text" id="user-name" required autocomplete="off">
+										<input class="contact-form__input" type="text" id="user-name" name='name' required autocomplete="off">
 
 										<label class="contact-form__label" for="user-email">e-mail</label>
-										<input class="contact-form__input" type="email" id="user-email" required autocomplete="off">
+										<input class="contact-form__input" type="email" id="user-email" name='email' required autocomplete="off">
 
 									</div>
 									<div class="contact-form__right">
 
 										<label class="contact-form__label contact-form__label_area" for="user-message">
-											<textarea class="contact-form__textarea" name="" id="user-message" placeholder="Your message"></textarea>
+											<textarea class="contact-form__textarea" name="" id="user-message" name='message' placeholder="Your message"></textarea>
 										</label>
 										<button type="submit" class="contact-form__btn">SEND</button>
 

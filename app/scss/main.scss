@@ -112,7 +112,6 @@ strong {
 	width: 100%;
 	z-index: 10;
 	height: 66px;
-	width: 100%;
 	background-color: $accent;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
 	@include respond-to('medium') {
@@ -150,7 +149,7 @@ strong {
 		justify-content: space-between;
 		& > li {
 			display: flex;
-			align-items: stretch;
+			// align-items: stretch;
 			position: relative;
 			margin-right: 7px;
 			flex: 0 1 auto;
@@ -254,7 +253,8 @@ strong {
 			letter-spacing: 0.15px;
 			text-transform: initial;
 			text-align: left;
-			@include link_on-hover(#ffe3c1 !important, $orange !important) @include respond-to('large') {
+			@include link_on-hover(#ffe3c1 !important, $orange !important);
+			@include respond-to('large') {
 				font-size: 19px;
 			}
 		}
@@ -403,7 +403,7 @@ strong {
 	left: -320px;
 	padding-bottom: 20px;
 	transition: left 0.4s ease-in-out;
-	&>ul {
+	& > ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
@@ -826,14 +826,14 @@ strong {
 	&_p0 {
 		padding: 0;
 	}
-	p {
+	& p {
 		margin-bottom: 20px;
 		color: $accent;
-		font-size: 30px;
+		font-size: 30px; 
 		font-weight: 400;
 		line-height: 30px;
 		letter-spacing: 1.5px;
-		text-align: justify;
+		text-align: justify; 
 		@include respond-to('medium') {
 			font-size: 25px;
 		}
@@ -863,9 +863,7 @@ strong {
 		& p {
 			letter-spacing: 1px;
 			line-height: 34px;
-			&:first-child {
-				// text-indent: 0;
-			}
+			text-align: left;
 		}
 	}
 }
@@ -873,9 +871,6 @@ strong {
 p.certificats {
 	text-align: center;
 	margin-bottom: 0;
-	& img {
-		// margin: 0 auto;
-	}
 }
 
 .content-map {
@@ -1302,13 +1297,13 @@ p.certificats {
 		background-color: $accent;
 		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
 		color: $orange;
-		font-size: 50px;
+		font-size: 43px;
 		font-weight: 400;
 		line-height: 77px;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		@include respond-to('1100') {
-			font-size: 40px;
+			font-size: 38px;
 		}
 		@include respond-to('medium') {
 			font-size: 35px;

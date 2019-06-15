@@ -33,8 +33,9 @@
 			<div class="header-desktop">
 				<div class="section-limit section-limit_header">
 					<nav class="main-nav">
+
 						<ul class="main-nav__left">
-							<li><a class="active" href="#">COMPANY</a></li>
+							<li class="active"><a href="#">COMPANY</a></li>
 							<li><a href="#">NEWS</a></li>
 							<li><a href="#">PRODUCTS</a>
 								<ul class="drop-menu">
@@ -44,14 +45,17 @@
 									<li><a href="#">Praline bars</a></li>
 								</ul>
 							</li>
-							<div class="header-logo">
-								<a href="."><img src="./img/logo.png" alt="logo"></a>
-							</div>
+						</ul>
+
+						<div class="header-logo">
+							<a href="."><img src="./img/logo.png" alt="logo"></a>
+						</div>
+
+						<ul class="main-nav__right">
 							<li><a href="#">EXPORT</a></li>
 							<li><a href="#">CONTACTS</a></li>
 						</ul>
-						<!-- <ul class="main-nav__right">
-						</ul> -->
+
 					</nav>
 					<div class="language-block">
 						<div class="language-block__item"><a href="#"><img class="img-responsive" src="./img/flag-ukr.png" alt="ukr"></a></div>
@@ -73,18 +77,20 @@
 						<div class="language-block__item"><a href="#"><img class="img-responsive" src="./img/flag-gb.png" alt="gb"></a></div>
 						<div class="language-block__item"><a href="#"><img class="img-responsive" src="./img/flag-ru.png" alt="ru"></a></div>
 					</div>
-					<div class='menu-mobile__item'><a href="#">COMPANY</a></div>
-					<div class='menu-mobile__item'><a href="#">NEWS</a></div>
-					<div class='menu-mobile__item menu-mobile__item_arrow'>PRODUCTS <span>&#10095;</span>
-						<ul class="drop-menu drop-menu__side">
-							<li><a href="#">Long wafer rolls</a></li>
-							<li><a href="#">Short wafer rolls </a></li>
-							<li><a href="#">Glazed sweets</a></li>
-							<li><a href="#">Praline bars</a></li>
-						</ul>
-					</div>
-					<div class='menu-mobile__item'><a href="#">EXPORT</a></div>
-					<div class='menu-mobile__item'><a href="#">CONTACTS</a></div>
+					<ul>
+						<li class='menu-mobile__item'><a href="#">COMPANY</a></li>
+						<li class='menu-mobile__item'><a href="#">NEWS</a></li>
+						<li class='menu-mobile__item menu-mobile__item_arrow'>PRODUCTS <span>&#10095;</span>
+							<ul class="drop-menu drop-menu__side">
+								<li><a href="#">Long wafer rolls</a></li>
+								<li><a href="#">Short wafer rolls </a></li>
+								<li><a href="#">Glazed sweets</a></li>
+								<li><a href="#">Praline bars</a></li>
+							</ul>
+						</li>
+						<li class='menu-mobile__item'><a href="#">EXPORT</a></li>
+						<li class='menu-mobile__item'><a href="#">CONTACTS</a></li>
+					</ul>
 				</div>
 				<div class="header-mobile__logo">
 					<a href=".">
@@ -154,58 +160,140 @@
 						<!-- End Product slider -->
 						<div class="prod-description">
 							<img src="./img/products/praline/praline-table.png" alt="">
-							<div class="table-main table-main__long-wafel table-responsive">
+							<div class="table-main table-responsive">
 								<table>
 									<thead>
 										<tr>
-											<th>Non-glazed,<br> Light Wafel Rolls</th>
-											<th>Packaging</th>
-											<th>Net weight of 1 carton, kg</th>
-											<th>Quantity ofcartons per 1 pallet</th>
-											<th>Net weight of 1 pallet, kg</th>
-											<th>Shelf life, months</th>
+											<th>Продукт</th>
+											<th>Упакування</th>
+											<th>Вага нетто 1 ящика/упаковки, кг</th>
+											<th>Кількість упаковок в 1 ящику</th>
+											<th>Кількість ящиків на 1 піддоні</th>
+											<th>Вага нетто 1 піддона, кг</th>
+											<th>Термін придатності, міс.</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>"Miio"<br> with filling condensed milk flavour</td>
-											<td class="td-with-desc">bulk, open-face carton</td>
-											<td class="td-with-number">2,0</td>
-											<td class="td-with-number">256</td>
-											<td class="td-with-number">512</td>
-											<td rowspan='5' class="td-with-number">12</td>
+										<tr class="bord-top">
+											<td class="td-title" rowspan="3">"Чіо-Чіо"<br />"Chio-Chio"<br>неглазурована</td>
+											<td class="td-with-desc dash">
+												Вагова, ящик-екран
+											</td>
+											<td class="dash">2,00</td>
+											<td class="dash">-</td>
+											<td class="dash">256</td>
+											<td class="dash">512</td>
+											<td class="td-month" rowspan='27'>9</td>
 										</tr>
 										<tr>
-											<td>"Miio"<br> with ice-cream flavour</td>
-											<td class="td-with-desc">package</td>
-											<td class="td-with-number">0,18</td>
-											<td class="td-with-number">12</td>
-											<td class="td-with-number">362,88</td>
-											<!-- <td></td> -->
+											<td class="td-with-desc dash">Упаковка</td>
+											<td class="dash">1,0</td>
+											<td class="dash">6</td>
+											<td class="dash">80</td>
+											<td class="dash">480</td>
+										</tr>
+										<tr class="bord-bottom">
+											<td class="td-with-desc dash">Упаковка</td>
+											<td class="dash">0,2</td>
+											<td class="dash">12</td>
+											<td class="dash">80</td>
+											<td class="dash">192</td>
+										</tr>
+										<tr class="bord-top">
+											<td class="td-title" rowspan="3">"Чіо-Чіо Нат"<br>"Chio-Chio Nut"<br>неглазурована</td>
+											<td class="td-with-desc dash">
+												Вагова, ящик-екран
+											</td>
+											<td class="dash">2,00</td>
+											<td class="dash">-</td>
+											<td class="dash">256</td>
+											<td class="dash">512</td>
 										</tr>
 										<tr>
-											<td>"Miio"<br> with vanilla flavour</td>
-											<td rowspan='3' class="td-with-desc">bulk, open-face carton</td>
-											<td class="td-with-number">2,0</td>
-											<td class="td-with-number">256</td>
-											<td class="td-with-number">512</td>
-											<!-- <td></td> -->
+											<td class="td-with-desc dash">Упаковка</td>
+											<td class="dash">1,0</td>
+											<td class="dash">6</td>
+											<td class="dash">80</td>
+											<td class="dash">480</td>
+										</tr>
+										<tr class="bord-bottom">
+											<td class="td-with-desc dash">Упаковка</td>
+											<td class="dash">0,2</td>
+											<td class="dash">12</td>
+											<td class="dash">80</td>
+											<td class="dash">192</td>
+										</tr>
+										<tr class="bord-top">
+											<td class="td-title" rowspan="3">"Чіо-Чіо Нат"<br>"Chio-Chio Nut"<br>глазурована</td>
+											<td class="td-with-desc dash">
+												Вагова, ящик-екран
+											</td>
+											<td class="dash">2,00</td>
+											<td class="dash">-</td>
+											<td class="dash">256</td>
+											<td class="dash">512</td>
 										</tr>
 										<tr>
-											<td>"Miio"<br> with baked milk flavour</td>
-											<!-- <td>bulk, open-face carton</td> -->
-											<td class="td-with-number">2,0</td>
-											<td class="td-with-number">256</td>
-											<td class="td-with-number">512</td>
-											<!-- <td></td> -->
+											<td class="td-with-desc dash">Упаковка</td>
+											<td class="dash">1,0</td>
+											<td class="dash">6</td>
+											<td class="dash">80</td>
+											<td class="dash">480</td>
+										</tr>
+										<tr class="bord-bottom">
+											<td class="td-with-desc dash">Упаковка</td>
+											<td class="dash">0,2</td>
+											<td class="dash">12</td>
+											<td class="dash">80</td>
+											<td class="dash">192</td>
+										</tr>
+										<tr class="bord-top">
+											<td class="td-title" rowspan="3">"Чіо-Чіо Чоко"<br>"Chio-Chio Choko"</td>
+											<td class="td-with-desc dash">
+												Вагова, ящик-екран
+											</td>
+											<td class="dash">2,00</td>
+											<td class="dash">-</td>
+											<td class="dash">256</td>
+											<td class="dash">512</td>
 										</tr>
 										<tr>
-											<td>"Miio"<br> with cocoa milk flavour</td>
-											<!-- <td>bulk, open-face carton</td> -->
-											<td class="td-with-number">2,0</td>
-											<td class="td-with-number">256</td>
-											<td class="td-with-number">512</td>
-											<!-- <td></td> -->
+											<td class="td-with-desc dash">Упаковка</td>
+											<td class="dash">1,0</td>
+											<td class="dash">6</td>
+											<td class="dash">80</td>
+											<td class="dash">480</td>
+										</tr>
+										<tr class="bord-bottom">
+											<td class="td-with-desc dash">Упаковка</td>
+											<td class="dash">0,2</td>
+											<td class="dash">12</td>
+											<td class="dash">80</td>
+											<td class="dash">192</td>
+										</tr>
+										<tr class="bord-top">
+											<td class="td-title" rowspan="3">"Чіо-Чіо Сан"<br>"Chio-Chio Sun"</td>
+											<td class="td-with-desc dash">
+												Вагова, ящик-екран
+											</td>
+											<td class="dash">2,00</td>
+											<td class="dash">-</td>
+											<td class="dash">256</td>
+											<td class="dash">512</td>
+										</tr>
+										<tr>
+											<td class="td-with-desc dash">Упаковка</td>
+											<td class="dash">1,0</td>
+											<td class="dash">6</td>
+											<td class="dash">80</td>
+											<td class="dash">480</td>
+										</tr>
+										<tr class="bord-bottom">
+											<td class="td-with-desc dash">Упаковка</td>
+											<td class="dash">0,2</td>
+											<td class="dash">12</td>
+											<td class="dash">80</td>
+											<td class="dash">192</td>
 										</tr>
 									</tbody>
 								</table>
