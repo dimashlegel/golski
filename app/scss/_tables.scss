@@ -13,9 +13,9 @@
 		& thead {
 			background-color: $orange;
 			& th {
-				padding: 5px;
+				padding: 5px; 
 				font-weight: 400;
-				border: 4px solid $accent;
+				border: 4px solid $accent; 
 				@include respond-to('small') {
 					border: 2px solid $accent;
 				}
