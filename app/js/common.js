@@ -114,7 +114,7 @@ $(function() {
 				toggleHamburger();
 				toggleOverlay();
 			}
-		})
+		});
 
 		dropMenu.on('click', function() {
 			if ($(this).find('.drop-menu__side').length == 1) {
@@ -122,7 +122,7 @@ $(function() {
 			} else {
 				dropMenu.removeClass('menu-mobile__item_open menu-mobile__item_arrow-rotate');
 			}
-		})
+		});
 
 		$(document).keyup(function(e) {
 			if (e.which == 27 && menuOpen) {
@@ -134,14 +134,14 @@ $(function() {
 	});
 
 
-
+// add aos effects for even and odd items
 	var hp_prods = $('.hp-products').find('.hp-products__title');
 	var hp_prods_imgs = $('.hp-products').find('.hp-products__img');
 
 	for (var i = 0; i < hp_prods.length; i += 2) {
 		$(hp_prods[i]).attr('data-aos', 'fade-right');
 	}
-	for (var i = 0; i < hp_prods_imgs.length; i += 2) {		
+	for (var i = 0; i < hp_prods_imgs.length; i += 2) {
 		$(hp_prods_imgs[i]).children("img").attr('data-aos', 'zoom-in-right');
 	}
 
