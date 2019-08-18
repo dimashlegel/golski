@@ -73,7 +73,7 @@ gulp.task('rsync', function() {
 });
 
 gulp.task('compress', async function() {
-	gulp.src('app/images/**/*.{gif,png,jpg,svg}')
+	gulp.src('app/images/**/*.{gif,png,jpg,svg,JPG,PNG}')
 	.pipe(imagemin([
 		// pngquant({quality: [0.5, 0.5]}),
 		pngquant({

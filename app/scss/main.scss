@@ -255,12 +255,12 @@ strong {
 	z-index: 1;
 	box-shadow: 5px 10px 10px 0 rgba($color: #000000, $alpha: 0.3);
 	& > li {
-		padding: 3px 5px 3px 10px;
+		padding: 6px 5px 6px 10px;
 		& > a {
 			display: block;
 			padding: 5px 0;
 			text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
-			font-size: 18px;
+			font-size: 19px;
 			font-weight: 400;
 			line-height: 28.34px;
 			letter-spacing: 0.15px;
@@ -324,6 +324,9 @@ strong {
 		// display: block;
 		height: 26px;
 		margin-left: 7px;
+		@include respond-to('medium') {
+			margin-left: 14px;
+		}
 		&:first-child {
 			margin-left: 0;
 		}
@@ -383,8 +386,7 @@ strong {
 			width: 36px;
 			height: 40px;
 			color: $yellow;
-			& svg {
-			}
+			& svg {}
 		}
 	}
 }
@@ -915,6 +917,34 @@ strong {
 			text-align: left;
 		}
 	}
+	&_news {
+		padding: 10px 55px;
+		@include respond-to('large') {
+			padding: 10px 25px;
+		}
+		@include respond-to('small') {
+			padding: 10px 25px 10px 35px;
+		}
+		& p {
+			font-size: 24px;
+			margin-bottom: 10px;
+			line-height: 1;
+			text-align: justify;
+			@include respond-to('larger') {
+				font-size: 22px;
+			}
+			@include respond-to('large') {
+				font-size: 21px;
+				letter-spacing: 0px;
+			}
+			@include respond-to('1100') {
+				font-size: 20px;
+			}
+			@include respond-to('extra-small') {
+				font-size: 18px;
+			}
+		}
+	}
 }
 
 p.certificats {
@@ -1132,7 +1162,6 @@ p.certificats {
 }
 
 .news {
-	padding-top: 17px;
 	background-color: #ffe3c1;
 	@include respond-to('medium') {
 		padding-top: 0;
@@ -1216,6 +1245,229 @@ p.certificats {
 				padding: 10px 0;
 			}
 		}
+	}
+}
+
+.news {
+	background-color: #fff;
+	& .row {
+		overflow: hidden;
+		max-height: 598px;
+		@include respond-to('medium') {
+			max-height: unset;
+		}
+		&:nth-child(even) {
+			& .col-lg-6 {
+				&:first-child {
+					order: 2;
+					@include respond-to('medium') {
+						order: 0;
+					}
+				}
+			}
+			& .news__img {
+				background-image: url(../img/hp-prod-back-lite1.jpg);
+				&::after {
+					box-shadow: inset -25px 0px 18px -10px rgba($color: #ff8717, $alpha: 0.35);
+					@include respond-to('extra-small') {
+						box-shadow: inset 0px 0px 10px 0px rgba($color: #ff8717, $alpha: 0.65);
+					}
+				}
+			}
+			& .news__title-wrap {
+				background-color: #fff;
+				@include respond-to('medium') {
+					background-color: #ffe3c1;
+				}
+				&::after {
+					left: -41px;
+					@include respond-to('large') {
+						display: none;
+					}
+					@include respond-to('medium') {
+						// left: -61px;
+					}
+				}
+			}
+		}
+		& .col-lg-6 {
+			// height: 598px;
+			&:first-child {
+				align-content: center;
+			}
+			&:last-child {
+				& .hp-prod-img-desc {
+					@include respond-to('small') {
+						margin-top: 18px;
+					}
+				}
+			}
+		}
+	}
+	&__title-wrap {
+		position: relative;
+		display: flex;
+		flex-flow: row wrap;
+		background-color: #ffe3c1;
+		height: 100%;
+		align-items: center;
+		@include respond-to('medium') {
+			min-height: 300px;
+		}
+		@include respond-to('small') {
+			min-height: 300px;
+		}
+		@include respond-to('extra-small') {
+			min-height: 250px;
+		}
+		@include respond-to('mobile-m') {
+			min-height: 200px;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			right: -41px;
+			top: 50%;
+			transform: translateY(-50%) rotate(45deg);
+			width: 76px;
+			height: 76px;
+			background-color: $orange;
+			@include respond-to('large') {
+				display: none;
+			}
+		}
+	}
+	& .news-wr {
+		@include respond-to('medium') {
+			max-width: 550px;
+			margin: 0 auto;
+		}
+	}
+	&__title {
+		margin: 0 auto;
+		padding: 20px 0;
+		text-align: center;
+		font-size: 50px;
+		color: $accent;
+		line-height: 0.8;
+		text-transform: uppercase;
+		font-weight: 400;
+		@include respond-to('medium') {
+			padding-top: 30px;
+		}
+		&_ru {
+			font-size: 73px;
+		}
+		@include respond-to('larger') {
+			font-size: 40px;
+		}
+		@include respond-to('1100') {
+			// font-size: 70px;
+		}
+		@include respond-to('small') {
+			font-size: 35px;
+		}
+		@include respond-to('extra-small') {
+			font-size: 30px;
+		}
+		// & a {
+		// 	// display: inline-block;
+		// 	max-width: 81%;
+		// 	padding: 0 0px;
+		// 	letter-spacing: -4px;
+		// 	@include link_on-hover($accent, $orange);
+		// 	transition: color 0.3s ease;
+		// 	&:hover {
+		// 		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+		// 	}
+		// }
+	}
+	&__desc {}
+	&__img {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		height: 598px;
+		background-image: url(../img/hp-prod-back-dark1.jpg);
+		background-size: cover;
+		background-position: center;
+		text-align: center;
+		@include respond-to('large') {
+			height: 500px;
+		}
+		@include respond-to('1100') {
+			height: 450px;
+		}
+		@include respond-to('medium') {
+			height: 400px;
+			max-width: 500px;
+			margin: 20px auto;
+		}
+		@include respond-to('extra-small') {
+			margin: 0px auto;
+		}
+		@include respond-to('mobile-l') {
+			height: 350px;
+		}
+		@include respond-to('mobile-m') {
+			height: 300px;
+		}
+		&::after {
+			pointer-events: none;
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			@include respond-to('extra-small') {
+				box-shadow: inset 0px 0px 10px 0px rgba($color: #ff8717, $alpha: 0.65);
+			}
+		}
+		& img {
+			max-width: 100%;
+			height: auto;
+			@include respond-to('extra-small') {
+				height: 100%;
+			}
+		}
+	}
+}
+
+.news-images {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	&__item {
+		width: 100%;
+		height: 50%;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		&:first-child {
+			border-bottom: 2px solid $orange;
+		}
+		&:last-child {
+			border-top: 2px solid $orange;
+		}
+	}
+}
+
+.news-body {
+	background-color: #ffe3c1;
+}
+
+.hp-prod-img-desc {
+	@include respond-to('extra-small') {
+		display: none;
+	}
+}
+
+.hp-prod-img-mob {
+	display: none;
+	@include respond-to('extra-small') {
+		display: block;
+		margin: 0 auto;
 	}
 }
 
@@ -1493,14 +1745,17 @@ p.certificats {
 	line-height: 28.34px;
 	letter-spacing: 1.11px;
 	@include respond-to('medium') {
-		font-size: 18px;
+		// font-size: 18px;
 	}
 	@include respond-to('extra-small') {
-		font-size: 16px;
+		// font-size: 16px;
 		line-height: 20px;
 	}
 	& p {
 		margin-bottom: 0;
+		@include respond-to('medium') {
+			padding: 5px 0;
+		}
 	}
 	& a {
 		transition: color 0.2s ease;
@@ -1590,7 +1845,7 @@ p.certificats {
 				color: $accent;
 			}
 			& span {
-				text-shadow: 0 1px 1px rgba(0,0,0,.75);
+				text-shadow: 0 1px 1px rgba(0, 0, 0, .75);
 				color: $yellow;
 			}
 		}
