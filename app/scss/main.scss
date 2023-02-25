@@ -231,11 +231,12 @@ strong {
 	}
 	&__left {
 		// flex: 0 1 44%;
-		flex: 0 1 40%;
+		flex: 0 1 48%;
 	}
 	&__right {
 		// flex: 0 1 28%;
-		flex: 0 1 40%;
+		// flex: 0 1 40%;
+		flex: 0 1 30%;
 	}
 }
 
@@ -289,6 +290,7 @@ strong {
 
 .header-logo {
 	// flex: 0 1 27%;
+	padding-top: 5px;
 	flex: 0 1 20%;
 	text-align: center;
 	& a {
@@ -520,10 +522,11 @@ strong {
 .wrapper-banners {
 	position: relative;
 	width: 100%;
-	height: 598px;
+	// height: 598px;
+	height: 496px;
 	overflow: hidden;
 	@include respond-to('medium') {
-		height: 500px;
+		// height: 500px;
 	}
 	@include respond-to('small') {
 		height: 450px;
@@ -567,13 +570,15 @@ strong {
 
 .banner-item {
 	width: 100%;
-	min-height: 598px;
+	// min-height: 598px;
+	display: block !important;
+	min-height: 496px;
 	position: relative;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	@include respond-to('medium') {
-		min-height: 500px;
+		// min-height: 500px;
 	}
 	@include respond-to('small') {
 		min-height: 450px;
@@ -609,11 +614,13 @@ strong {
 		}
 	}
 	& .slick-dots {
-		bottom: 25px;
-		font-size: 20px;
+		bottom: 15px;
+		font-size: 0px;
 		line-height: 1;
 		& li {
-			margin: 0 7px;
+			margin: 0 4px;
+			width: 14px;
+			height: 14px;
 			@include respond-to('extra-small') {
 				margin: 0 2px;
 			}
@@ -626,27 +633,27 @@ strong {
 				}
 			}
 			& button {
-				height: 22px;
-				width: 22px;
+				height: 14px;
+				width: 14px;
 				padding: 0;
-				@include respond-to('extra-small') {
-					height: 15px;
-					width: 15px;
-				}
+				// @include respond-to('extra-small') {
+				// 	height: 15px;
+				// 	width: 15px;
+				// }
 				&::before {
 					content: '';
 					display: block;
-					height: 22px;
-					width: 22px;
+					height: 14px;
+					width: 14px;
 					// font-size: 22px;
 					box-shadow: 0 0 4px 1px rgba(255, 227, 193, 0.79);
 					background-color: $accent;
 					border-radius: 50%;
 					opacity: 1;
-					@include respond-to('extra-small') {
-						height: 15px;
-						width: 15px;
-					}
+					// @include respond-to('extra-small') {
+					// 	height: 15px;
+					// 	width: 15px;
+					// }
 				}
 			}
 		}
@@ -665,7 +672,8 @@ strong {
 	background-color: #fff;
 	& .row {
 		overflow: hidden;
-		max-height: 598px;
+		// max-height: 598px;
+		max-height: 304px;
 		&:nth-child(even) {
 			& .col-sm-6 {
 				&:first-child {
@@ -676,21 +684,21 @@ strong {
 				}
 			}
 			& .hp-products__img {
-				background-image: url(../img/hp-prod-back-lite1.jpg);
+				// background-image: url(../img/hp-prod-back-lite1.jpg);
+				background-image: url(../img/prod-l-bg.png);
 				&::after {
-					box-shadow: inset -25px 0px 18px -10px rgba($color: #ff8717, $alpha: 0.35);
+					// box-shadow: inset -25px 0px 18px -10px rgba($color: #ff8717, $alpha: 0.35);
 					@include respond-to('extra-small') {
-						box-shadow: inset 0px 0px 10px 0px rgba($color: #ff8717, $alpha: 0.65);
+						// box-shadow: inset 0px 0px 10px 0px rgba($color: #ff8717, $alpha: 0.65);
 					}
 				}
 			}
 			& .hp-products__title-wrap {
 				background-color: #fff;
 				&::after {
-					left: -41px;
-					@include respond-to('medium') {
-						left: -61px;
-					}
+					border-width: 14px 0px 14px 14px;
+					left: 0;
+					border-color: transparent transparent transparent $orange;
 				}
 			}
 		}
@@ -726,47 +734,58 @@ strong {
 		&::after {
 			position: absolute;
 			content: '';
-			right: -41px;
+			right: 0;
 			top: 50%;
-			transform: translateY(-50%) rotate(45deg);
-			width: 76px;
-			height: 76px;
-			background-color: $orange;
-			@include respond-to('medium') {
-				right: -61px;
-			}
+			transform: translateY(-50%);
+			// width: 28px;
+			// height: 28px;
+			// background-color: $orange;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 14px 14px 14px 0;
+			border-color: transparent $orange transparent transparent;
 			@include respond-to('small') {
 				display: none;
 			}
+		}
+		&_6 {
+			background-image: url(../img/pr6-bg.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 	}
 	&__title {
 		margin: 0 auto;
 		text-align: center;
-		font-size: 95px;
+		// font-size: 95px;
+		font-size: 50px;
 		line-height: 0.8;
 		text-transform: uppercase;
 		font-weight: 400;
 		&_ru {
-			font-size: 73px;
+			// font-size: 73px;
+			font-size: 50px;
 		}
 		@include respond-to('larger') {
-			font-size: 80px;
+			font-size: 45px;
 		}
 		@include respond-to('1100') {
-			font-size: 70px;
+			font-size: 40px;
 		}
 		@include respond-to('medium') {
-			font-size: 60px;
+			font-size: 35px;
 		}
 		@include respond-to('small') {
-			font-size: 50px;
+			font-size: 30px;
 		}
 		& a {
 			// display: inline-block;
-			max-width: 81%;
+			// max-width: 81%;
 			padding: 0 0px;
-			letter-spacing: -4px;
+			line-height: 1.2;
+			// letter-spacing: -4px;
 			@include link_on-hover($accent, $orange);
 			transition: color 0.3s ease;
 			&:hover {
@@ -779,7 +798,9 @@ strong {
 		position: relative;
 		width: 100%;
 		height: 100%;
-		background-image: url(../img/hp-prod-back-dark1.jpg);
+		// background-image: url(../img/hp-prod-back-dark1.jpg);
+		background-color: #ffe3c1;
+		background-image: url(../img/prod-r-bg.png);
 		background-size: cover;
 		background-position: center;
 		text-align: center;
@@ -1860,6 +1881,10 @@ p.certificats {
 			font-size: 35px;
 		}
 	}
+}
+
+.newcss {
+	display: block;
 }
 
 @import "media";
