@@ -526,16 +526,20 @@ strong {
 	height: 496px;
 	overflow: hidden;
 	@include respond-to('medium') {
-		// height: 500px;
+		height: 420px;
 	}
 	@include respond-to('small') {
-		height: 450px;
+		height: 390px;
+	}
+	@include respond-to('extra-small') {
+		height: 250px;
+		margin-top: 66px;
 	}
 	@include respond-to('mobile-l') {
-		height: 400px;
+		height: 230px;
 	}
 	@include respond-to('mobile-m') {
-		height: 350px;
+		height: 220px;
 	}
 	&_prod {
 		height: 592px;
@@ -578,16 +582,19 @@ strong {
 	background-size: cover;
 	background-repeat: no-repeat;
 	@include respond-to('medium') {
-		// min-height: 500px;
+		min-height: 420px;
 	}
 	@include respond-to('small') {
-		min-height: 450px;
+		min-height: 390px;
+	}
+	@include respond-to('extra-small') {
+		min-height: 250px;
 	}
 	@include respond-to('mobile-l') {
-		min-height: 400px;
+		min-height: 230px;
 	}
 	@include respond-to('mobile-m') {
-		min-height: 350px;
+		min-height: 220px;
 	}
 }
 
@@ -670,6 +677,57 @@ strong {
 
 .hp-products {
 	background-color: #fff;
+	margin-bottom: 100px;
+	@include respond-to('extra-small') {
+		margin-bottom: 50px;
+	}
+	&__row {
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+		flex-flow: row nowrap;
+		@include respond-to('extra-small') {
+			flex-flow: row wrap;
+		}
+		&:nth-child(even) {
+			flex-flow: row-reverse;
+			@include respond-to('extra-small') {
+				flex-flow: row wrap;
+			}
+			.hp-products__text {}
+			& .hp-products__title-wrap {
+				background-color: #fff;
+				&::after {
+					border-width: 14px 0px 14px 14px;
+					left: 0;
+					border-color: transparent transparent transparent $orange;
+				}
+			}
+			& .hp-products__img {
+				background-image: url(../img/prod-l-bg.png);
+			}
+		}
+		&:nth-child(6) {
+			& .hp-products__title-wrap {
+				background-image: url(../img/pr6-bg.jpg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+	&__text {
+		flex: 1 1 50%;
+		@include respond-to('extra-small') {
+			flex: 1 1 100%;
+		}
+	}
+	&__img {
+		flex: 1 1 50%;
+		@include respond-to('extra-small') {
+			flex: 1 1 100%;
+		}
+	}
 	& .row {
 		overflow: hidden;
 		// max-height: 598px;
@@ -715,6 +773,14 @@ strong {
 				}
 			}
 		}
+		&:nth-child(6) {
+			& .hp-products__title-wrap {
+				background-image: url(../img/pr6-bg.jpg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
 	}
 	&__title-wrap {
 		position: relative;
@@ -723,13 +789,13 @@ strong {
 		height: 100%;
 		align-items: center;
 		@include respond-to('small') {
-			height: 300px;
-		}
-		@include respond-to('extra-small') {
 			height: 250px;
 		}
-		@include respond-to('mobile-m') {
+		@include respond-to('extra-small') {
 			height: 200px;
+		}
+		@include respond-to('mobile-m') {
+			height: 180px;
 		}
 		&::after {
 			position: absolute;
@@ -805,13 +871,16 @@ strong {
 		background-position: center;
 		text-align: center;
 		@include respond-to('small') {
-			height: 300px;
+			height: 250px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		@include respond-to('extra-small') {
-			height: 250px;
+			height: 200px;
 		}
 		@include respond-to('mobile-m') {
-			height: 200px;
+			height: 180px;
 		}
 		&::after {
 			pointer-events: none;
@@ -831,7 +900,7 @@ strong {
 			height: auto;
 			// width: 100%;
 			@include respond-to('extra-small') {
-				height: 100%;
+				// height: 100%;
 			}
 		}
 	}
@@ -839,7 +908,7 @@ strong {
 
 .hp-prod-img-desc {
 	@include respond-to('extra-small') {
-		display: none;
+		// display: none;
 	}
 }
 
@@ -1319,7 +1388,7 @@ p.certificats {
 			&:last-child {
 				& .hp-prod-img-desc {
 					@include respond-to('small') {
-						margin-top: 18px;
+						// margin-top: 18px;
 					}
 				}
 			}
@@ -1480,7 +1549,7 @@ p.certificats {
 
 .hp-prod-img-desc {
 	@include respond-to('extra-small') {
-		display: none;
+		// display: none;
 	}
 }
 
@@ -1693,7 +1762,7 @@ p.certificats {
 	z-index: 1;
 	background-color: $accent;
 	padding: 55px 0 30px;
-	box-shadow: 0px 0px 55px 35px rgba(255, 145, 23, 0.8);
+	box-shadow: 0px 10px 55px 35px rgba(255, 145, 23, 0.8);
 	&__contact {
 		max-width: 330px;
 		@include respond-to('small') {
@@ -1713,7 +1782,7 @@ p.certificats {
 		}
 	}
 	&__company {
-		max-width: 273px;
+		max-width: 265px;
 		float: right;
 		@include respond-to('small') {
 			float: none;
@@ -1781,6 +1850,9 @@ p.certificats {
 	& a {
 		transition: color 0.2s ease;
 		@include link_on-hover(#ffe3c1, $orange);
+		& br {
+			display: none;
+		}
 	}
 }
 
